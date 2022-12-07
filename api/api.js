@@ -7,3 +7,11 @@ async function getAll() {
 
   return result;
 }
+
+async function getBookInfoById(bookId) {
+  const result = await fetch(url +"/"+bookId)
+    .then((result) => result.json())
+    .catch((e) => e);
+    renderBookInfo(result);
+  return result;
+}

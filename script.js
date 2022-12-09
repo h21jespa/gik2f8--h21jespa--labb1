@@ -34,14 +34,14 @@ var bookInfo = getBookInfoById(bookId).then((apiBook) => (bookInfo = apiBook));
 
 function renderBookInfo(book) {
     clearBookInfo();
-    let html   = `<div id="divBookInfo"
-                  class="mb-2 mx-2 last:mb-0 p-3 text-indigo-900 last:border-b-0 border-b border-indigo-700 cursor-pointer">
-                  <p>${book.id}</p>
-                  <p>${book.author}</p> 
-                  <p>${book.pages}</p>
-                  <p>${book.releaseDate}</p>
-                  <p>${book.title}</p>
-                  <img src="${book.coverImage}">
+    let html   = `<div id="divBookInfo" 
+                  class = "text-black-600 text-xl text-left mt-4 mb-7"
+    
+                  <p>Author: ${book.author}</p> 
+                  <p>Pages: ${book.pages}</p>
+                  <p>Releasedate: ${book.releaseDate}</p>
+                  <p>Title:${book.title}</p>
+                  <img  src="${book.coverImage}">
                   </div>`
   const root = document.getElementById('root');
   root.insertAdjacentHTML('afterend',html);
